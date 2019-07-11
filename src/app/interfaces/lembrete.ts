@@ -1,6 +1,10 @@
-type prioridadeLembrete = 'BAIXA' | 'MEDIA' | 'ALTA';
+type prioridade = 'BAIXA' | 'MEDIA' | 'ALTA';
+type fezOs = 'SIM' | 'NAO';
 export interface Lembrete {
  id: number;
  texto: string;
- prioridade: prioridadeLembrete;
+ arquivado: boolean;
+ prioridade: prioridade;
+ modificado: number;
+ fezOs: fezOs;
 }

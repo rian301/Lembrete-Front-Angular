@@ -1,7 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { Lembrete } from '../../interfaces/lembrete';
 import { ErrorMsgComponent } from '../../compartilhado/error-msg/error-msg.component';
 import { LembreteService } from 'src/app/services/lembrete.service';
+import { Lembrete } from 'src/app/interfaces/lembrete';
 
 @Component({
   selector: 'app-lista-lembrete',
@@ -10,6 +10,7 @@ import { LembreteService } from 'src/app/services/lembrete.service';
 })
 export class ListaLembreteComponent implements OnInit {
   public lembretes: Lembrete[];
+  
   @ViewChild(ErrorMsgComponent) errorMsgComponent: ErrorMsgComponent;
 
   constructor(private lembreteService: LembreteService) { }
